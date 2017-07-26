@@ -1,4 +1,5 @@
 from qm7.mol import molecule
+from qm7.basis import get_basis
 import argparse
 
 
@@ -35,3 +36,4 @@ parser.add_argument('--dampstart', '-ds', type=int, default=5, metavar='',
 args = parser.parse_args()
 
 mol = molecule(args.molecule)
+basis = get_basis(mol, args.basis)
