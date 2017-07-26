@@ -5,7 +5,7 @@ import setuptools
 
 if __name__ == "__main__":
     setuptools.setup(
-        name='fuzzy_octo_waffle',
+        name='QM_2017_SSS_Team7',
         version="0.1.1",
         description='Hartree-Fock',
         author='MolSSI-SSS',
