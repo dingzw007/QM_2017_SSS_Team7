@@ -13,7 +13,7 @@ python setup.py install
 Alternatively you can set up the environment by following the instructions [here](https://molssi-sss.github.io/Logistics_SSS_2017/Setup.html). After the environment is configures make sure to activate your python environment:
 
 ```python
-conda activate sss
+source activate sss
 ```
 
 ## Usage
