@@ -1,6 +1,4 @@
-from qm7.mol import molecule
-from qm7.basis import get_basis
-from qm7.solver import solve
+from qm7.scf import SCF
 import argparse
 
 
@@ -38,6 +36,6 @@ parser.add_argument('--dampstart', '-ds', type=int, default=5, metavar='',
 
 args = parser.parse_args()
 
-mol = molecule(args.molecule)
-basis = get_basis(mol, args.basis)
-solve(basis, args.nob, mol, args.iteration, args.econv, args.dconv, args.dampvalue, args.dampstart)
+scf = SCF(args)
+scf.initialize()
+scf.solve()
