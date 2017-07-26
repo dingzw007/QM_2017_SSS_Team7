@@ -1,5 +1,6 @@
 from qm7.mol import molecule
 from qm7.basis import get_basis
+from qm7.solver import solve
 import argparse
 
 
@@ -37,3 +38,5 @@ args = parser.parse_args()
 
 mol = molecule(args.molecule)
 basis = get_basis(mol, args.basis)
+nel=5;
+solve(basis,5,mol)
