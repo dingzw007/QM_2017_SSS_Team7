@@ -23,11 +23,13 @@ parser.add_argument('--molecule', '-m', type=str, default='tests/water', metavar
                     help='Molecule file name (default: water)')
 parser.add_argument('--basis', '-b', type=str, default='sto-3g', metavar='',
                     help='Basis set selection (defult: sto-3g)')
+parser.add_argument('--nob', '-n', type=int, default=5, metavar='',
+                    help='Number of occupied orbitals (defult: 5)')
 parser.add_argument('--iteration', '-i', type=int, default=50, metavar='',
-                    help='Number of iterations (defult: 50)')
-parser.add_argument('--ecov', type=float, default=1.e-6, metavar='',
+                    help='Max number of iterations (defult: 50)')
+parser.add_argument('--econv', type=float, default=1.e-6, metavar='',
                     help='Energy convergence value (default: 1.e-6)')
-parser.add_argument('--dcov', type=float, default=1.e-6, metavar='',
+parser.add_argument('--dconv', type=float, default=1.e-6, metavar='',
                     help='Density convergence value (default: 1.e-6)')
 parser.add_argument('--dampvalue', '-dv', type=float, default=0.2, metavar='',
                     help='Damping value (default: 0.2)')
@@ -38,5 +40,4 @@ args = parser.parse_args()
 
 mol = molecule(args.molecule)
 basis = get_basis(mol, args.basis)
-nel=5;
-solve(basis,5,mol)
+solve(basis, args.nob, mol, args.iteration, args.econv, args.dconv, args.dampvalue, args.dampstart)
