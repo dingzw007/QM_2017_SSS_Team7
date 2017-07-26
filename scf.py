@@ -1,3 +1,4 @@
+from qm7.mol import molecule
 import argparse
 
 
@@ -16,7 +17,7 @@ Kutay B. Sezginel
     """,
     formatter_class=argparse.RawDescriptionHelpFormatter)
 
-parser.add_argument('--molecule', '-m', type=str, default='water', metavar='',
+parser.add_argument('--molecule', '-m', type=str, default='tests/water', metavar='',
                     help='Molecule file name (default: water)')
 parser.add_argument('--basis', '-b', type=str, default='sto-3g', metavar='',
                     help='Basis set selection (defult: sto-3g)')
@@ -32,3 +33,5 @@ parser.add_argument('--dampstart', '-ds', type=int, default=5, metavar='',
                     help='Iteration to start damping (default: 5)')
 
 args = parser.parse_args()
+
+mol = molecule(args.molecule)

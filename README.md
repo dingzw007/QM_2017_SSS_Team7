@@ -17,7 +17,10 @@ conda activate sss
 ```
 
 ## Usage
-
+Run following to see options:
+```
+python scf.py --help
+```
 ## Team Members
 - Srinivas Mushnoori
 - Sangeeta Sur
