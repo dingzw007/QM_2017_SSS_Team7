@@ -19,12 +19,8 @@ class SCF:
         self.d_conv = cli_args.dconv
         self.damp_value = cli_args.dampvalue
         self.damp_start = cli_args.dampstart
-<<<<<<< HEAD
-        self.Etotal = 0.0
-=======
         self.damping = cli_args.damping
         self.DIIS = cli_args.DIIS
->>>>>>> 371fb5200fd118c6d2a864015a3a6954df780987
 
     def initialize(self):
         """
