@@ -18,6 +18,7 @@ class SCF:
         self.d_conv = cli_args.dconv
         self.damp_value = cli_args.dampvalue
         self.damp_start = cli_args.dampstart
+        self.Etotal = 0.0
 
     def initialize(self):
         """
@@ -76,6 +77,7 @@ class SCF:
             print("%2i | % 16.12f | % 8.4e | % 8.4e |" % (i + 1, E_total, E_diff, grad_rms))
 
             if (E_diff <= self.e_conv) and (grad_rms <= self.d_conv):
+                self.Etotal = E_total
                 break
 
             self.eps, self.C = self.diag(self.F, self.A)
