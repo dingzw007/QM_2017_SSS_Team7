@@ -103,4 +103,5 @@ ENV/
 .mypy_cache/
 
 #EMACS temp files
-.py~
+*.*~
+
