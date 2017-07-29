@@ -22,7 +22,6 @@ class SCF:
         self.damping = cli_args.damping
         self.DIIS = cli_args.DIIS
     
-
     def initialize(self):
         """
         Initialize SCF
