@@ -7,6 +7,7 @@ from qm7.scf import SCF
 import psi4
 import argparse
 
+
 def test_energy():
     parser = argparse.ArgumentParser()
 
