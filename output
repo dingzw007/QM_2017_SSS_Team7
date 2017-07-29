@@ -1,0 +1,47 @@
+    Molecular point group: c2v
+    Full point group: C2v
+
+    Geometry (in Angstrom), charge = 0, multiplicity = 1:
+
+       Center              X                  Y                   Z               Mass       
+    ------------   -----------------  -----------------  -----------------  -----------------
+           O          0.000000000000     0.000000000000    -0.075791843589    15.994914619560
+           H          0.000000000000    -0.866811828967     0.601435779270     1.007825032070
+           H          0.000000000000     0.866811828967     0.601435779270     1.007825032070
+
+   => Loading Basis Set <=
+
+    Name: STO-3G
+    Role: ORBITAL
+    Keyword: None
+    atoms 1   entry O          line    81 file /home/jerry/miniconda/envs/sss/share/psi4/basis/sto-3g.gbs 
+    atoms 2-3 entry H          line    19 file /home/jerry/miniconda/envs/sss/share/psi4/basis/sto-3g.gbs 
+
+  Basis Set: STO-3G
+    Blend: STO-3G
+    Number of shells: 5
+    Number of basis function: 7
+    Number of Cartesian functions: 7
+    Spherical Harmonics?: true
+    Max angular momentum: 1
+
+Namespace(DIIS=False, basis='sto-3g', damping=False, dampstart=5, dampvalue=0.2, dconv=1e-06, econv=1e-06, max_iter=50, molecule='tests/water', nocc=5)
+<class 'argparse.Namespace'>
+ # |      E_total     |    E_diff   |   Grad_rms  |
+ 2 | -73.285796442304 | -7.3286e+01 |  1.2073e-01 |
+ 3 | -74.828125250694 | -1.5423e+00 |  5.0829e-02 |
+ 4 | -74.935487958494 | -1.0736e-01 |  1.3204e-02 |
+ 5 | -74.941477710730 | -5.9898e-03 |  2.7669e-03 |
+ 6 | -74.941971964905 | -4.9425e-04 |  1.1616e-03 |
+ 7 | -74.942056030278 | -8.4065e-05 |  4.9653e-04 |
+ 8 | -74.942074388020 | -1.8358e-05 |  2.4174e-04 |
+ 9 | -74.942078616525 | -4.2285e-06 |  1.1554e-04 |
+10 | -74.942079599027 | -9.8250e-07 |  5.5857e-05 |
+11 | -74.942079827691 | -2.2866e-07 |  2.6924e-05 |
+12 | -74.942079880925 | -5.3234e-08 |  1.2994e-05 |
+13 | -74.942079893318 | -1.2394e-08 |  6.2691e-06 |
+14 | -74.942079896204 | -2.8854e-09 |  3.0250e-06 |
+15 | -74.942079896876 | -6.7178e-10 |  1.4595e-06 |
+16 | -74.942079897032 | -1.5638e-10 |  7.0424e-07 |
+SCF has finished!
+
