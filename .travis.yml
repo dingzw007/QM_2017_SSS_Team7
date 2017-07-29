@@ -33,7 +33,7 @@ before_script:
 
 script:
   - pip install -e .
-  - py.test --cov=./
+  - py.test -v --cov=./
 
 after_success:
   - codecov
