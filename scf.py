@@ -39,7 +39,6 @@ parser.add_argument('--DIIS', '-D', action='store_true', default=False,
                     help='Iteration to start damping (default: 5)')
 
 args = parser.parse_args()
-
 scf = SCF(args)
 scf.initialize()
 scf.solve()
