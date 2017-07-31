@@ -26,8 +26,8 @@ python scf.py --help
 Go to `JKbinding` folder and run:
 ```
 mkdir build
-cmake ../ -DCMAKE_CXX_FLAGS="-Ofast"
 cd build
+cmake ../ -DCMAKE_CXX_FLAGS="-Ofast"
 make
 ```
 Then copy the Python code to `build` directory and run it:
