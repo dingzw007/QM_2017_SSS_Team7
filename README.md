@@ -3,6 +3,8 @@
 
 # QM_2017_SSS_Team7
 
+![alt_text](https://goo.gl/HX7orn)
+
 ## Installation
 Download the repository and run `setup.py` as follows:
 ```
