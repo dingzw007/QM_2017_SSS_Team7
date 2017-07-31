@@ -21,6 +21,21 @@ Run following to see options:
 ```
 python scf.py --help
 ```
+
+### Compiling the JK algorithm
+Go to `JKbinding` folder and run:
+```
+mkdir build
+cmake ../ -DCMAKE_CXX_FLAGS="-Ofast"
+cd build
+make
+```
+Then copy the Python code to `build` directory and run it:
+```
+cp ../JKbinding.py .
+python JKbinding.py
+```
+
 ## Team Members
 - Srinivas Mushnoori
 - Sangeeta Sur
