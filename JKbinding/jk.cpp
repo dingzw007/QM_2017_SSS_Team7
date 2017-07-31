@@ -31,7 +31,7 @@ int jk_numpy(py::array_t<double> I, py::array_t<double> D,
       int ind = p * d3 + q * d2, ind2 = p * d3 + q * d;
       for (size_t i = 0; i < d; i++) {
         for (size_t j = 0; j <= i; j++) {
-          valj += (I_data[ind + j * d + i] + I_data[ind + i * d + j]) * D_data[i * d + j];
+          valj += 2.0 * I_data[ind + i* d +j]  * D_data[i * d + j];
           valk += (I_data[ind2 + j * d2 + i] + I_data[ind2 + i * d2 + j]) * D_data[i * d + j];
         }
       }

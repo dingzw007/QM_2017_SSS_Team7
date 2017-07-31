@@ -1,6 +1,6 @@
 import numpy as np
-import qm7_jk as jk
 import psi4
+import qm7_jk as jk
 import time
 
 
@@ -39,10 +39,9 @@ t_einsum_avg = sum(t_einsum) / len(t_einsum)
 print('Einsum avg (%i runs): %.5f' % (n_trials, t_einsum_avg))
 
 # Initialize density
-identity = np.identity(nbf)
-J = np.ones((nbf, nbf)) - 0.5 * identity
-K = np.ones((nbf, nbf)) - 0.5 * identity
-D = D * J
+J = np.random.rand(nbf, nbf)
+K = np.random.rand(nbf,nbf)
+D = D - np.diag(np.diag(D) * 0.5)
 
 # QM7 JK -------------------------------------------------------
 t_qm7 = []
