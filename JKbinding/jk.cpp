@@ -36,8 +36,8 @@ int jk_numpy(py::array_t<double> I, py::array_t<double> D,
         }
       }
       J_data[p * d + q] = valj;
-      K_data[p * d + q] = valk;
       J_data[q * d + p] = valj;
+      K_data[p * d + q] = valk;
       K_data[q * d + p] = valk;
     }
   }
