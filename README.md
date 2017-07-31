@@ -3,6 +3,8 @@
 
 # QM_2017_SSS_Team7
 
+![alt_text](https://goo.gl/HX7orn)
+
 ## Installation
 Download the repository and run `setup.py` as follows:
 ```
@@ -21,6 +23,21 @@ Run following to see options:
 ```
 python scf.py --help
 ```
+
+### Compiling the JK algorithm
+Go to `JKbinding` folder and run:
+```
+mkdir build
+cd build
+cmake ../ -DCMAKE_CXX_FLAGS="-Ofast"
+make
+```
+Then copy the Python code to `build` directory and run it:
+```
+cp ../JKbinding.py .
+python JKbinding.py
+```
+
 ## Team Members
 - Srinivas Mushnoori
 - Sangeeta Sur
