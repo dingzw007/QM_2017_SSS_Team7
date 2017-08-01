@@ -28,7 +28,7 @@ int jk_numpy(py::array_t<double> I, py::array_t<double> D,
   double * J_data = static_cast<double *>(J_info.ptr);
   double * K_data = static_cast<double *>(K_info.ptr);
 
-#pragma omp parallel for schedule(dynamic)
+#pragma omp parallel for schedule(dynamic) num_threads(2)  //must specify the number of threads here
 for(size_t p = 0; p < d; p++)
   {
     for(size_t q = 0; q <= p; q++)
