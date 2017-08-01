@@ -2,6 +2,12 @@
 #include <pybind11/stl.h>
 #include <pybind11/numpy.h>
 #include <iostream>
+#include<omp.h>
+#include<sstream>
+#include<stdio.h>
+#include<vector>
+#include<math.h>
+
 
 namespace py = pybind11;
 
@@ -22,7 +28,8 @@ int jk_numpy(py::array_t<double> I, py::array_t<double> D,
   double * J_data = static_cast<double *>(J_info.ptr);
   double * K_data = static_cast<double *>(K_info.ptr);
 
-  for(size_t p = 0; p < d; p++)
+#pragma omp parallel for schedule(dynamic)
+for(size_t p = 0; p < d; p++)
   {
     for(size_t q = 0; q <= p; q++)
     {
